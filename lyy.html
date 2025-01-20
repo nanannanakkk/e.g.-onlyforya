@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Vani</title>
+    <style>
+        body {
+            background-color: #ffe6f2;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #ff4da6;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        img {
+            max-width: 200px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px; 
+        }
+
+        button {
+            background-color: #ff80bf;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        #noBtn {
+            position: relative;
+        }
+
+        #yesBtn {
+            position: relative;
+        }
+    </style>
+    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <meta name="description" content="A simple website, built with Glitch. Remix it to get your own."/>
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Hello World!" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta property="og:description" content="A simple website, built with Glitch. Remix it to get your own."/>
+    <meta property="og:image" content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"/>
+    <meta name="twitter:card" content="summary" />
+</head>
+<body>
+    <p>Do you love me?</p>
+    <img src="c:\Users\fatoo\Downloads\ehhh.jpg" alt="Image">
+    <div class="buttons">
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+
+        noBtn.addEventListener('mouseenter', () => {
+            const randomX = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const randomY = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            
+            noBtn.style.left = randomX + 'px';
+            noBtn.style.top = randomY + 'px';
+        });
+
+        yesBtn.addEventListener('click', () => {
+            yesBtn.style.position = 'relative';
+            yesBtn.style.left = '-20px'; 
+
+            alert('love ya too sweetie');
+        });
+    </script>
+</body>
+</html>
